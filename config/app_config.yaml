@@ -1,0 +1,10 @@
+#---
+#:database_configuration: 
+#    :adapter: mysql
+#    :database: solar
+#    :username: root
+#    :password: root
+
+:database_configuration: 
+    :adapter: sqlite3
+    :database: /tmp/solarsample.sqlite3

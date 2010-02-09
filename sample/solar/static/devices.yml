@@ -1,0 +1,17 @@
+inverter1:
+  plant: default_plant
+  unique_id: "2100147669"
+  metadata: inverter_meta
+  aggregationrule: inverter_aggrules
+
+inverter2:
+  plant: default_plant
+  unique_id: "2100147715"
+  metadata: inverter_meta
+  aggregationrule: inverter_aggrules
+
+sunmeter:
+  plant: default_plant
+  unique_id: "sunmeter"
+  metadata: sunmeter_meta
+  aggregationrule: sunmeter_aggrules

@@ -1,0 +1,30 @@
+plant_aggrules:
+  description: '{
+                  eday        : [sum, eday],
+                  pac         : [sum, pac],
+                  irradiance  : [pick, 0, irradiance],
+                  temperature : [pick, 0, temperature],
+                  inv0_eday   : [pick, 1, eday],
+                  inv1_eday   : [pick, 2, eday] 
+                }'
+
+inverter_meta:
+  description: '[[time, integer], [pac, float], [etotal, float]]'
+  
+# pac is W, integrated W*sec, divide by 3600 to get W*h, divide by 1000 to get kw*h
+inverter_aggrules:
+  description: '{ 
+                  eday    : [growth, etotal],
+                  pac     : [div, [integrate, time, pac], 3600000] 
+                }'
+
+sunmeter_meta:
+  description: '[[time, integer], [irradiance, float], [temperature, integer]]'
+  
+# irradiance is W/qm, integrated W/qm*sec, divide by 3600 to get W/qm*h, multiply by 80qm to get W*h, divide by 1000 to get kw*h
+# 1/10th => Umsetzung
+sunmeter_aggrules:
+  description: '{ 
+                  irradiance  : [mult, 80, [div, [integrate, time, irradiance], 36000000]],
+                  temperature : [avg, temperature] 
+                }'

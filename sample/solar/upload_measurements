@@ -1,0 +1,26 @@
+#!/bin/sh
+# this script uploads measurement data to a plant watchdog server
+# To prepare the server you can run
+# $ plantwatchdog --create_solar
+# which creates an appropriate schema. 
+# Then start the server and run this script with the approriate host and port
+host=${1:-127.0.0.1}
+port=${2:-7000}
+client_db=${3:-`dirname "$0"`/measurements/client.sqlite3}
+csv_file=/tmp/measurements.csv
+baseurl=http://$host:$port
+user=markus
+pw=markus
+echo Upload measurements from $client_db to plant watchdog at $baseurl using $user:$pw
+
+ids=`sqlite3 $client_db "select distinct inverterid from inverters"`
+sqlite3 -csv $client_db 'select time, irradiance, temperature from environment' > $csv_file
+count=`curl --user $user:$pw -T $csv_file $baseurl/upload/device/sunmeter`
+echo Uploaded $count sunmeter measurements
+for id in $ids 
+do
+  sqlite3 -csv $client_db "select time, pac, etotal from inverters where inverterid=$id" > $csv_file
+  count=`curl --user $user:$pw -T $csv_file $baseurl/upload/device/$id`
+  echo Uploaded $count measurements of inverter $id
+done
+rm $csv_file

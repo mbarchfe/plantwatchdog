@@ -1,0 +1,3 @@
+default_plant:
+  user: default_user
+  aggregationrule: plant_aggrules

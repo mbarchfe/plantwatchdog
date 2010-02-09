@@ -1,0 +1,4 @@
+pkg
+.autotest
+.DS_Store
+*.log

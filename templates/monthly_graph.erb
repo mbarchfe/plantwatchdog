@@ -1,0 +1,41 @@
+<form id="monthly_graph_form">
+           <label for="monthly_graph_year">Jahr:</label></td>   
+            <select name="year" size="1" id="monthly_graph_year">
+            <% years = years_with_data(user); 
+               years.each_index {
+               |i| %>
+               <option <%=i == years.size() -1 ? 'selected="selected"' : ""%>><%=years[i].to_s%></option>
+               <% } %>
+            </select>
+            <label for="monthly_graph_month">Monat:</label></td>    
+            <select name="month" size="1" id="monthly_graph_month">
+            </select>
+            
+            <input class="fetchSeries" type="submit" value="Zeichnen">
+            
+        </form>
+<div id="monthly_placeholder" style="width:<%=graph_width%>;height:<%=graph_height%>;"></div>
+
+<script id="source" language="javascript" type="text/javascript">
+   $(function () {
+        var year = $('#monthly_graph_year');
+        var month = $('#monthly_graph_month');
+        year.selectChain({
+            target: month,
+            type: 'get',
+            data: {}            
+          }, 
+          function(settings) { settings.url = '/availabledata/'+$('#monthly_graph_year').selectedOption();}
+        ).trigger('change');
+        month.change(function() {
+         if (year.get(0).options.selectedIndex >= 0) {
+          $('#monthly_graph_form:first').submit();
+         }
+        }) ;            
+    });
+    
+    var monthly = new Graph("#monthly_placeholder");
+    monthly.urlfunction = function() { return '/monthly/plant/' + $('#monthly_graph_year').selectedOption() + '/' + $('#monthly_graph_month').selectedOption() }
+    $("form#monthly_graph_form").submit(function() { return monthly.submitForm() } );
+    
+</script>

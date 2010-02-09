@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# an alternative way of starting the server is via rackup:
+# 1. bin$ gem install rack
+# 2. bin$ cd .. 
+# 3. $ rackup
+#d=`dirname $0`
+#ruby -I${d:-.}/../lib -rubygems ${d:-.}/../lib/plantwatchdog/main.rb $*
+require 'plantwatchdog/main'
