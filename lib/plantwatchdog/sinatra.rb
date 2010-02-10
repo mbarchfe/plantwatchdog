@@ -161,9 +161,6 @@ module PlantWatchdog
       end
       
       get '/graph.html' do
-        width=request[:width] ? request[:width] : 300
-        height=request[:height] ? request[:height] : 200
-           
         erb :graph
       end
 
