@@ -55,8 +55,7 @@
 			}, 0);
                     },
                     error: function (xhr, desc, er) {
-                        // add whatever debug you want here.
-			alert("an error occurred");
+			        alert("Could not load " + settings.url);
                     }
                 });
             });
