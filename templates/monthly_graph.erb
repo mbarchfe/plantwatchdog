@@ -4,7 +4,7 @@
             <% years = years_with_data(user); 
                years.each_index {
                |i| %>
-               <option <%=i == years.size() -1 ? 'selected="selected"' : ""%>><%=years[i].to_s%></option>
+               <option value="<%=years[i].to_s%>" <%=i == years.size() -1 ? 'selected="selected"' : ""%>><%=years[i].to_s%></option>
                <% } %>
             </select>
             <label for="monthly_graph_month">Monat:</label></td>    
