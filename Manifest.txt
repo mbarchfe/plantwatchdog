@@ -22,6 +22,7 @@ public/images/arrow-up.gif
 public/images/spinner.gif
 public/images/tabs.png
 public/js/customflot.js
+public/js/excanvas.min.js
 public/js/jquery-1.3.2.min.js
 public/js/jquery.flot.crosshair.js
 public/js/jquery.flot.js
