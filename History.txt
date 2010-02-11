@@ -1,4 +1,8 @@
-=== 0.0.1 / 2000-12-30
+=== 0.0.2 / 2010-02-11
+
+* maintenance of meta files for gemcutter an hoe
+
+
+=== 0.0.1 / 2010-12-30
 
 * prototype is online
-
