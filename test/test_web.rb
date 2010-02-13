@@ -7,14 +7,17 @@ require 'test/unit'
 require 'rack/test'
 require 'test/test_base'
 
-set :environment, :test
-
 module PlantWatchdog
+  class TestSinatraApp < UI::SinatraApp
+    set :environment, :test
+  end
+  
   class WebTest < Test::Unit::TestCase
     include TestUtil
     include Rack::Test::Methods
+    
     def app
-      PlantWatchdog::UI::SinatraApp
+      TestSinatraApp
     end
 
     def prepare

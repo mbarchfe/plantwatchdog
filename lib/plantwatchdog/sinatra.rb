@@ -14,7 +14,7 @@
 $:.unshift File.join(File.dirname(__FILE__),"..")
 require 'plantwatchdog/model'
 require 'plantwatchdog/data'
-require 'sinatra'
+require 'sinatra/base'
 require 'erb'
 
 module PlantWatchdog

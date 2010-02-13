@@ -6,3 +6,5 @@
 #d=`dirname $0`
 #ruby -I${d:-.}/../lib -rubygems ${d:-.}/../lib/plantwatchdog/main.rb $*
 require 'plantwatchdog/main'
+
+PlantWatchdog.start

@@ -72,5 +72,3 @@ module PlantWatchdog
     end
   end
 end
-
-PlantWatchdog.start
