@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: PlantWatchdog::Aggregation::Methods</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/plantwatchdog/aggregation_methods_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/plantwatchdog/aggregation_methods.rb">lib/plantwatchdog/aggregation_methods.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000008">#add</a></li>
+					
+					<li><a href="#M000002">#avg</a></li>
+					
+					<li><a href="#M000010">#call</a></li>
+					
+					<li><a href="#M000006">#div</a></li>
+					
+					<li><a href="#M000001">#growth</a></li>
+					
+					<li><a href="#M000003">#integrate</a></li>
+					
+					<li><a href="#M000011">#logger</a></li>
+					
+					<li><a href="#M000005">#mult</a></li>
+					
+					<li><a href="#M000009">#pick</a></li>
+					
+					<li><a href="#M000007">#subtract</a></li>
+					
+					<li><a href="#M000004">#sum</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../PlantWatchdog.html">PlantWatchdog</a></li>
+				
+					<li><a href="../../PlantWatchdog/Aggregation.html">PlantWatchdog::Aggregation</a></li>
+				
+					<li><a href="../../PlantWatchdog/Aggregation/Methods.html">PlantWatchdog::Aggregation::Methods</a></li>
+				
+					<li><a href="../../Array.html">Array</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">PlantWatchdog::Aggregation::Methods</h1>
+
+		<div id="description">
+			<p>
+This module contains those methods which can be referenced from aggregation
+rules.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-method" class="method-detail ">
+				<a name="M000008"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add</span><span
+						class="method-args">(a,b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The sum of two numbers
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 144</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add</span> <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>
+        <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="avg-method" class="method-detail ">
+				<a name="M000002"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">avg</span><span
+						class="method-args">(timeseries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The average of a timeseries.
+</p>
+<pre>
+ $ irb
+ &gt;&gt; require 'plantwatchdog/aggregation_methods'
+ &gt;&gt; include PlantWatchdog::Aggregation::Methods
+ &gt;&gt; avg([])
+ =&gt; NaN
+ &gt;&gt; avg([1])
+ =&gt; 1.0
+ &gt;&gt; avg([1,2])
+ =&gt; 1.5
+ &gt;&gt; avg([1,2,3])
+ =&gt; 2.0
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="avg-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 85</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">avg</span> <span class="ruby-identifier">timeseries</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">sum</span>(<span class="ruby-identifier">timeseries</span>)
+        <span class="ruby-identifier">result</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">timeseries</span>.<span class="ruby-identifier">size</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="call-method" class="method-detail ">
+				<a name="M000010"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call</span><span
+						class="method-args">(method, *args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Call aggregation method <em>method</em> with arguments
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 154</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+        <span class="ruby-keyword kw">begin</span>
+          <span class="ruby-identifier">m</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">method</span> <span class="ruby-identifier">method</span>
+          <span class="ruby-identifier">m</span>.<span class="ruby-identifier">call</span> <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+        <span class="ruby-keyword kw">rescue</span>
+          <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Error calling method '#{method}': &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">$!</span>.<span class="ruby-identifier">to_s</span>)
+          <span class="ruby-keyword kw">nil</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="div-method" class="method-detail ">
+				<a name="M000006"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">div</span><span
+						class="method-args">(a,b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The ratio of two numbers.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="div-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 134</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">div</span> <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>
+        <span class="ruby-identifier">a</span><span class="ruby-operator">/</span><span class="ruby-identifier">b</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="growth-method" class="method-detail ">
+				<a name="M000001"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">growth</span><span
+						class="method-args">(timeseries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculate the difference between the last and first value of a list. Useful
+to find the growth within a list of measurements where every entry is
+already aggregated.
+</p>
+<pre>
+ $ irb
+ &gt;&gt; require 'plantwatchdog/aggregation_methods'
+ &gt;&gt; include PlantWatchdog::Aggregation::Methods
+ &gt;&gt; growth([])
+ =&gt; 0
+ &gt;&gt; growth([1])
+ =&gt; 0
+ &gt;&gt; growth([1,2])
+ =&gt; 1
+ &gt;&gt; growth([1,2,3])
+ =&gt; 2
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="growth-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 67</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">growth</span> <span class="ruby-identifier">timeseries</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">timeseries</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">timeseries</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">timeseries</span>.<span class="ruby-identifier">first</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="integrate-method" class="method-detail ">
+				<a name="M000003"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">integrate</span><span
+						class="method-args">(times, values)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Integrate the values over time.
+</p>
+<pre>
+ $ irb
+ &gt;&gt; require 'plantwatchdog/aggregation_methods'
+ &gt;&gt; include PlantWatchdog::Aggregation::Methods
+ &gt;&gt; integrate([],[])
+ =&gt; 0
+ &gt;&gt; integrate([0],[0])
+ =&gt; 0
+ &gt;&gt; integrate([0,1],[0,1])
+ =&gt; 0.5
+ &gt;&gt; integrate([0,2],[0,2])
+ =&gt; 2.0
+ &gt;&gt; integrate([0,1,2],[0,1,2])
+ =&gt; 2.0
+ &gt;&gt; integrate([0,1,2],[1,2,3])
+ =&gt; 4.0
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="integrate-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 107</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">integrate</span> <span class="ruby-identifier">times</span>, <span class="ruby-identifier">values</span>
+        <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">times</span>.<span class="ruby-identifier">each_prior</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">y</span><span class="ruby-operator">-</span><span class="ruby-identifier">x</span>}, <span class="ruby-identifier">values</span>.<span class="ruby-identifier">each_prior</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">y</span><span class="ruby-operator">+</span><span class="ruby-identifier">x</span>)<span class="ruby-operator">/</span><span class="ruby-value">2.0</span>}].<span class="ruby-identifier">transpose</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span>,<span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">last</span> }
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="mult-method" class="method-detail ">
+				<a name="M000005"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mult</span><span
+						class="method-args">(a,b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The product of two numbers
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="mult-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 129</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mult</span> <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>
+        <span class="ruby-identifier">a</span><span class="ruby-operator">*</span><span class="ruby-identifier">b</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="pick-method" class="method-detail ">
+				<a name="M000009"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pick</span><span
+						class="method-args">(n,a)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pick the n_th_ entry out of array a.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pick-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 149</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pick</span> <span class="ruby-identifier">n</span>,<span class="ruby-identifier">a</span>
+        <span class="ruby-identifier">a</span>[<span class="ruby-identifier">n</span>]
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="subtract-method" class="method-detail ">
+				<a name="M000007"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">subtract</span><span
+						class="method-args">(a,b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The difference between two numbers.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="subtract-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 139</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">subtract</span> <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>
+        <span class="ruby-identifier">a</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">b</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="sum-method" class="method-detail ">
+				<a name="M000004"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sum</span><span
+						class="method-args">(timeseries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sum up all entries of an array which can contain nil values.
+</p>
+<pre>
+ $ irb
+ &gt;&gt; require 'plantwatchdog/aggregation_methods'
+ &gt;&gt; include PlantWatchdog::Aggregation::Methods
+ &gt;&gt; sum([])
+ =&gt; 0
+ &gt;&gt; sum([1])
+ =&gt; 1
+ &gt;&gt; sum([1,nil])
+ =&gt; 1
+ &gt;&gt; sum([1,2])
+ =&gt; 3
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="sum-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 124</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sum</span> <span class="ruby-identifier">timeseries</span>
+        <span class="ruby-identifier">timeseries</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-value">? </span><span class="ruby-identifier">a</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">v</span> }
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="logger-method" class="method-detail ">
+				<a name="M000011"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">logger</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="logger-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/plantwatchdog/aggregation_methods.rb, line 165</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">logger</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">logger</span>
+      <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
