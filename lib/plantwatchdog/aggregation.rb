@@ -43,6 +43,7 @@ module PlantWatchdog
     end
 
     module RuleEvaluation
+      include Methods
       # data is an array of dictionaries, e.g. retrieved via Measurements.from_csv
       def eval_rule rule_array, data
         return 0 if rule_array.empty?
@@ -57,7 +58,7 @@ module PlantWatchdog
             data.collect { |d| d[arg_desc] }
           end
         }
-        return Methods.call(method_name, *args)
+        return call(method_name, *args)
       end
     end
 

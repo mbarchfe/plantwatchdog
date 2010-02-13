@@ -39,9 +39,9 @@ EOF
       calledOneParam = nil
       calledTwoParams = nil
 
-      Aggregation::Methods.class.send(:define_method, :aggZeroParam, Proc.new { calledZeroParam = true })
-      Aggregation::Methods.class.send(:define_method, :aggOneParam, Proc.new { |p1| calledOneParam = p1 })
-      Aggregation::Methods.class.send(:define_method, :aggTwoParams, Proc.new { |p1,p2| calledTwoParams = [p1,p2] })
+      Aggregation::Methods.send(:define_method, :aggZeroParam, Proc.new { calledZeroParam = true })
+      Aggregation::Methods.send(:define_method, :aggOneParam, Proc.new { |p1| calledOneParam = p1 })
+      Aggregation::Methods.send(:define_method, :aggTwoParams, Proc.new { |p1,p2| calledTwoParams = [p1,p2] })
 
       aggDevice = Aggregation::Device.create(inverter1, year, day)
       aggDevice.aggregate
@@ -50,7 +50,7 @@ EOF
       assert_equal([12,16], calledOneParam)
       assert_equal([[12,16], [33,0]], calledTwoParams)
 
-      Aggregation::Methods.class.send(:define_method, :nested, Proc.new { |t| t.first + t.last })
+      Aggregation::Methods.send(:define_method, :nested, Proc.new { |t| t.first + t.last })
       inverter1.aggrules = { "nested" => [:mult, 0.5, [:nested, :time]] }
       device_aggregate = aggDevice.aggregate()
       assert_equal(14, device_aggregate["nested"])
